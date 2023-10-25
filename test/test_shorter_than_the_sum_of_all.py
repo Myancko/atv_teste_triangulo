@@ -17,5 +17,5 @@ def test_shorter_than_the_sum_of_all ():
     assert b.identify_triangule() == 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2'
     assert c.identify_triangule() == 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2'
     assert d.identify_triangule() == 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2' 
-    assert e.identify_triangule() == None
+    assert e.identify_triangule() == None   
   
