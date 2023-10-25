@@ -47,21 +47,11 @@ Este teorema é um dos fundamentos da geometria e é utilizado para resolver mui
         
         #- Each side must be shorter than the sum of all sides divided by 2;
         
-        sum_of_all_sides = self.a + self.b + self.c / 2
+        sum_of_all_sides = (self.a + self.b + self.c) / 2
         
         if self.a > sum_of_all_sides or self.b > sum_of_all_sides or self.c > sum_of_all_sides:
             
-            return 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2;'
-        
-        #One side equals the sum of the others
-
-        sum_a_b = self.a + self.b
-        sum_a_c = self.a + self.c
-        sum_b_c = self.b + self.c
-        
-        #if self.a != sum_b_c or self.b != sum_a_c or self.c != sum_a_b:
-            
-        #    return 'Isnt triangle cuz One side equals the sum of the others'
+            return 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2'
         
         #### Classificação por lados:
         
@@ -69,23 +59,26 @@ Este teorema é um dos fundamentos da geometria e é utilizado para resolver mui
         
         if self.a == self.b and self.a == self.c and self.b == self.c:
             
-            print('>>> Equilatero')
+            #print('>>> Equilatero')
+            pass
             
         #Isósceles 
         elif self.a == self.b and self.a != self.c or self.a == self.c and self.a != self.b or  self.b == self.c and self.b != self.a:
         
-            print('Isosceles')
+            #print('Isosceles')
+            pass
             
         #Escaleno
         
         elif self.a  != self.b and  self.a != self.c and self.b  != self.c:
             
-            print('Escaleno')
+            #print('Escaleno')
+            pass
             
         #### Classificação por ângulos ;(
             
-i = Triangulo (1,1,1)
+i = Triangulo (1,-1,1)
 j = Triangulo (1,1,2)
-n = Triangulo (1,2,3)
+n = Triangulo (50, 10, 30)
 
 print(i.identify_triangule(),"\n", j.identify_triangule(),"\n", n.identify_triangule())
