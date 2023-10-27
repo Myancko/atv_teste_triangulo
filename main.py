@@ -13,20 +13,6 @@ Propriedade da desigualdade triangular: Em um triângulo,
 a soma de quaisquer dois lados deve ser maior que o comprimento do terceiro lado. 
 Esta propriedade é crucial para determinar se determinados comprimentos podem formar um triângulo.
 
-Classificação por lados:
-
-Triângulo Equilátero: Um triângulo em que todos os lados têm o mesmo comprimento.
-Triângulo Isósceles: Um triângulo em que pelo menos dois lados têm o mesmo comprimento.
-Triângulo Escaleno: Um triângulo em que todos os lados têm comprimentos diferentes.
-Classificação por ângulos:
-
-Triângulo Acutângulo: Um triângulo em que todos os ângulos internos são agudos, ou seja, têm medidas menores que 90 graus.
-Triângulo Obtusângulo: Um triângulo em que um dos ângulos internos é obtuso, ou seja, tem uma medida maior que 90 graus.
-Triângulo Retângulo: Um triângulo que possui um ângulo reto, ou seja, um ângulo de 90 graus.
-Teorema de Pitágoras: Em um triângulo retângulo, 
-o quadrado da medida da hipotenusa é igual à soma dos quadrados das medidas dos catetos. 
-Este teorema é um dos fundamentos da geometria e é utilizado para resolver muitos problemas relacionados a triângulos retângulos.
-
     """
     
     def __init__ (self, a, b, c):
@@ -37,9 +23,9 @@ Este teorema é um dos fundamentos da geometria e é utilizado para resolver mui
         
     def identify_triangule(self):
         
-        """
-         No side may have a length of zero
-        """
+    
+        #No side may have a length of zero
+    
         
         if self.a == 0 or self.b == 0 or self.c == 0: #No side may have a length of zero
             
@@ -52,6 +38,12 @@ Este teorema é um dos fundamentos da geometria e é utilizado para resolver mui
         if self.a > sum_of_all_sides or self.b > sum_of_all_sides or self.c > sum_of_all_sides:
             
             return 'Isnt triangle cuz Each side must be shorter than the sum of all sides divided by 2'
+        
+        #Propriedade da desigualdade triangular
+        
+        if self.a + self.b <= self.c or self.a + self.c <= self.b or self.b + self.c <= self.a:
+            
+            return 'Isnt triangle cuz the sum of any two sides must be greater than the length of the third side'
         
         #### Classificação por lados:
         
